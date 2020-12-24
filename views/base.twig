@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+    <main>
+    {% block content %}{% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+        &copy; Copyright 2020 by <a href="#">Bryan</a>
+        {% endblock %}
+    </footer>
+</body>
+</html>

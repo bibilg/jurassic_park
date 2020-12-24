@@ -7,5 +7,10 @@
         "symfony/process": "^5.2",
         "twig/twig": "^3.1",
         "michelf/php-markdown": "^1.9"
+    },
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ]
     }
 }
