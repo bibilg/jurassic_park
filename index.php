@@ -34,12 +34,7 @@ Flight::route('/', function(){
 
     $dinosaurs = getDinos();
     
-<<<<<<< HEAD
     echo 'TODO : ListeDinosaurs (views + datas)';
-=======
-    
->>>>>>> d824022e97f5b7e0c75f4430d434b36f7fbafc1a
-
 });
 
 
