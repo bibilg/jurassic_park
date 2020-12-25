@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    {% block head %}
-    <title>{% block title %}{% endblock %} - My Webpage</title>
-    {% endblock %}
-</head>
-<body>
-    <main>
-    {% block content %}{% endblock %}
-    </main>
-    <footer>
-        {% block footer %}
-        &copy; Copyright 2020 by <a href="#">Bryan</a>
-        {% endblock %}
-    </footer>
-</body>
+<html>
+    <head>
+        <title>{%block title %}{% endblock %}Jurassic Park</title>
+        <meta charset="utf8" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Staatliches" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+            <a href="/">
+                Jurassic Park
+            </a>
+            <nav>
+                <a href="/">Home</a>
+            </nav>
+        </header>
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+        <footer>
+            <img src="/assets/img/logojp.png" alt="Jurassic Park" />
+        </footer>
+    </body>
 </html>
