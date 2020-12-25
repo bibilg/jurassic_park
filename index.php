@@ -32,13 +32,9 @@ Flight::map('render', function($template, $data=array()){
 
 Flight::route('/', function(){
 
-    $books = getBooks();
-    $foo='Hello';
-
-    Flight::render('base.twig', array(
-        'books' => $books,
-        'foo' => $foo
-    ));
+    $dinosaurs = getDinos();
+    
+    echo 'TODO : ListeDinosaurs (views + datas)';
 
 });
 
