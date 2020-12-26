@@ -41,13 +41,27 @@ Flight::route('/', function(){
 
 Flight::route('/@dino', function($dino){
 
+    $dino_names = getArrayOfDinoNames();
+
+    $random_keys = array_rand($dino_names, 3); // Fetch 3 randoms dinosaurs
+    $FirstRandomDino = $dino_names[$random_keys[0]];
+    $SecondRandomDino = $dino_names[$random_keys[1]];
+    $ThirdRandomDino = $dino_names[$random_keys[2]];
+
+    $FirstDino = getDino($FirstRandomDino);
+    $SecondDino = getDino($SecondRandomDino);
+    $ThirdDino = getDino($ThirdRandomDino);
+
+    $RandomDinos = array($FirstDino,$SecondDino,$ThirdDino);
+
     $dino = getDino($dino);
 
     $descriptionMD = renderHTMLFromMarkdown($dino->description);
 
     Flight::render('dino.twig', array(
         'dino' => $dino,
-        'descriptionMD' => $descriptionMD
+        'descriptionMD' => $descriptionMD,
+        'randomDinos' => $RandomDinos
     ));
 
 });

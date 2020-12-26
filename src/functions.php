@@ -25,3 +25,17 @@ function renderHTMLFromMarkdown($string_markdown_formatted)
 {
     return Markdown::defaultTransform($string_markdown_formatted);
 }
+
+function getArrayOfDinoNames()
+{
+    $dinosaurs=getDinos();
+
+    $dino_names = array();
+
+    foreach($dinosaurs as $value)
+    {
+        array_push($dino_names,$value->slug);
+    }
+
+    return $dino_names;
+}

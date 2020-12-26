@@ -32,13 +32,14 @@
 
     <aside>
         <h3>Top rated dinosaurs</h3>
-        <!-- iterate here ? -->
-            <a href="">
+        {% for randomDino in randomDinos %}
+            <a href="/{{randomDino.slug}}">
                 <figure>
-                    <img src="" alt="" />
-                    <figcaption>Discover the Brachiosaurus</figcaption>
+                    <img src="{{randomDino.avatar}}" alt="{{randomDino.slug}}" />
+                    <figcaption>Discover the {{randomDino.name}}</figcaption>
                 </figure>
             </a>
+        {% endfor %}
     </aside>
 </div>
 {% endblock %}
