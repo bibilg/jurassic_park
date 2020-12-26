@@ -1,5 +1,7 @@
 <?php
 
+use Michelf\Markdown;
+
 function getDinos()
 {
     $response = Requests::get('https://allosaurus.delahayeyourself.info/api/dinosaurs/');
@@ -16,4 +18,10 @@ function getDino($dino)
     $dino=json_decode($response->body);
 
     return $dino;
+}
+
+// For Markdown
+function renderHTMLFromMarkdown($string_markdown_formatted)
+{
+    return Markdown::defaultTransform($string_markdown_formatted);
 }

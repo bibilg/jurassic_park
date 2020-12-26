@@ -8,11 +8,11 @@
         <h2>Discover the {{dino.name}}</h2>
 
         <div class="description">
-            {{dino.description}}
+            {{descriptionMD|raw}}
         </div>
 
         <div class="card">
-            <img src="{{ dino.avatar }} " alt="{{ dino.slug }}" />
+            <img src="{{dino.avatar}} " alt="{{dino.slug}}" />
             <dl>
                 <dt>Name</dt>
                 <dd>{{dino.name}}</dd>

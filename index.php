@@ -43,8 +43,11 @@ Flight::route('/@dino', function($dino){
 
     $dino = getDino($dino);
 
+    $descriptionMD = renderHTMLFromMarkdown($dino->description);
+
     Flight::render('dino.twig', array(
-        'dino' => $dino
+        'dino' => $dino,
+        'descriptionMD' => $descriptionMD
     ));
 
 });
