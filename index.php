@@ -34,7 +34,9 @@ Flight::route('/', function(){
 
     $dinosaurs = getDinos();
     
-    echo 'TODO : ListeDinosaurs (views + datas)';
+    Flight::render('listeDino.twig', array(
+        'dinosaurs' => $dinosaurs
+    ));
 });
 
 

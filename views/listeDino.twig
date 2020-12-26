@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+
+{% block title %}Liste dinosaurs{% endblock %}
+
+{% block main %}
+<section>
+    <h2>The world of Jurassic Park</h2>
+
+    {% for dino in dinosaurs %}
+        <a href="{{ dino.slug }}">
+            <figure>
+                <img src="{{ dino.avatar }}" alt="{{ dino.slug }}" />
+                <figcaption>Discover the {{ dino.name }}</figcaption>
+            </figure>
+        </a>
+    {% endfor %}
+</section>
+{% endblock %}
