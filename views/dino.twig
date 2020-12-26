@@ -1,31 +1,31 @@
 {% extends "base.twig" %}
 
-{% block title %} Nom du dino récupéré{% endblock %}
+{% block title %} {{dino.name}}{% endblock %}
 
 {% block main %}
 <div class="grid">
     <article>
-        <h2>Discover the Brachiosaurus</h2>
+        <h2>Discover the {{dino.name}}</h2>
 
         <div class="description">
-            Lorem ispum
+            {{dino.description}}
         </div>
 
         <div class="card">
-            <img src="" alt="" />
+            <img src="{{ dino.avatar }} " alt="{{ dino.slug }}" />
             <dl>
                 <dt>Name</dt>
-                <dd>Brachiosaurus</dd>
+                <dd>{{dino.name}}</dd>
                 <dt>Name meaning</dt>
-                <dd>Brachiosaurus</dd>
+                <dd>{{dino.name_meaning}}</dd>
                 <dt>Diet</dt>
-                <dd>Brachiosaurus</dd>
+                <dd>{{dino.diet}}</dd>
                 <dt>Height</dt>
-                <dd>Brachiosaurus m.</dd>
+                <dd>{{dino.height}}</dd>
                 <dt>Length</dt>
-                <dd>Brachiosaurus m.</dd>
+                <dd>{{dino.length}}</dd>
                 <dt>Weight</dt>
-                <dd>Brachiosaurus kg.</dd>
+                <dd>{{dino.weight}}</dd>
             </dl>
         </div>
     </article>

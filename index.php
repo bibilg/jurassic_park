@@ -39,6 +39,14 @@ Flight::route('/', function(){
     ));
 });
 
+Flight::route('/@dino', function($dino){
 
+    $dino = getDino($dino);
+
+    Flight::render('dino.twig', array(
+        'dino' => $dino
+    ));
+
+});
 
 Flight::start();
